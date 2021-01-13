@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist",
+    "allowJs": true,
+    "jsx": "react",
+    "target": "es3",
+    "module": "umd",
+    "moduleResolution": "node",
+    "lib": ["es2015", "dom"]
+  },
+  "include": ["./src/**/*"]
+}

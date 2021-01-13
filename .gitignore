@@ -1,0 +1,54 @@
+
+# Created by https://www.toptal.com/developers/gitignore/api/node,django
+# Edit at https://www.toptal.com/developers/gitignore?templates=node,django
+
+### Django ###
+*.log
+*.pot
+*.pyc
+__pycache__/
+local_settings.py
+*.sqlite3
+*.sqlite3-journal
+media
+
+# Translations
+*.mo
+
+# Environments
+.env
+
+### Node ###
+# Logs
+logs
+npm-debug.log*
+
+# Diagnostic reports (https://nodejs.org/api/report.html)
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+
+# Dependency directories
+node_modules/
+package-lock.json
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Optional npm cache directory
+.npm
+
+# Optional REPL history
+.node_repl_history
+
+
+# dotenv environment variables file
+.env.test
+.env*.local
+
+# End of https://www.toptal.com/developers/gitignore/api/node,django

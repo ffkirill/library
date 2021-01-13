@@ -1,0 +1,19 @@
+Django Library demo.
+
+This project demonstrates application, which implements
+CRUD system with REST API (book library).
+
+Features:
+ * Items reordering with fractional index
+ * Table based sequence for generations ascending numbers for ordering items while inserting
+ * Concurrent updates check with optimistic lock (concerning full chain: web ui -> db)
+ * Browsable API with Django REST framework
+ * Minimal web ui with React/TypeScript
+ * No DB specific code
+
+Requirements:
+  Python 3.8 with virtualenv (use `pip install -r requirements.txt`)
+  NodeJS v10.19.0
+  npm v6.14.4
+
+Node and npm are both required when building UI.
