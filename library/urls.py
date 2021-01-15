@@ -14,6 +14,8 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
+from django.conf import settings
+from django.views.static import serve as serve_static
 from rest_framework import routers
 from django.urls import include, path
 import book.views
@@ -33,5 +35,13 @@ router.register(r'bookshelfitem', bookshelf.views.BookshelfItemViewSet)
 # Wire up our API using automatic URL routing.
 # Additionally, we include login URLs for the browsable API.
 urlpatterns += [
-    path('api/', include(router.urls)),
+    path('api/', include(router.urls)),]
+
+# Append static serve in debug mode:
+if settings.DEBUG:
+    urlpatterns += [
+        path('media/<path:path>', serve_static,
+            {'document_root': settings.STATIC_ROOT}),
+        path('ui/<path:path>', serve_static,
+            {'document_root': settings.BASE_DIR / 'ui' / 'dist'})
 ]
