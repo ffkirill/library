@@ -46,7 +46,6 @@ class BookshelfItemSerializer(VersionFieldMixin,
     bookshelf_version = IntegerField(required=False)
 
 
-
     def create(self, validated_data):
         """DTO position to raw models's position"""
         position: Optional[Fraction] = validated_data.pop('position', None)
