@@ -6,6 +6,7 @@ from rest_framework import serializers
 from rest_framework.fields import IntegerField
 from rest_framework.exceptions import ValidationError
 
+from book.serializers import BookSerializer
 from .models import Bookshelf, BookshelfItem
 
 
@@ -44,7 +45,7 @@ class BookshelfItemSerializer(VersionFieldMixin,
     position = FractionField(required=False)
     version = IntegerField(required=False)
     bookshelf_version = IntegerField(required=False)
-
+    book = BookSerializer(read_only=True)
 
     def create(self, validated_data):
         """DTO position to raw models's position"""

@@ -13,7 +13,7 @@ Features:
 
 Requirements:
   Python 3.8 with virtualenv (use `pip install -r requirements.txt`)
-  NodeJS v10.19.0
+  NodeJS v10.19.0 see (`package.json`)
   npm v6.14.4
 
 Node and npm are both required when building UI.

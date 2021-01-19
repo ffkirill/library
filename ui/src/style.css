@@ -1,0 +1,13 @@
+.bookshelves {
+  list-style-type: none;
+}
+
+.bookshelves__item {
+  display: inline-block;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.bookshelves__item-active {
+  background: green;
+}

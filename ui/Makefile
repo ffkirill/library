@@ -1,5 +1,6 @@
 dist : main.js js_libs
 	install src/index.html dist
+	install src/style.css dist
 
 main.js :
 	npx tsc
