@@ -45,7 +45,7 @@ class BookshelfItemSerializer(VersionFieldMixin,
     position = FractionField(required=False)
     version = IntegerField(required=False)
     bookshelf_version = IntegerField(required=False)
-    book = BookSerializer(read_only=True)
+    book_entity = BookSerializer(read_only=True, source='book')
 
     def create(self, validated_data):
         """DTO position to raw models's position"""
@@ -74,6 +74,7 @@ class BookshelfItemSerializer(VersionFieldMixin,
                   'url',
                   'bookshelf',
                   'book',
+                  'book_entity',
                   'position',
                   'version',
                   'bookshelf_version')

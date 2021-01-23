@@ -41,7 +41,7 @@ urlpatterns += [
 if settings.DEBUG:
     urlpatterns += [
         path('media/<path:path>', serve_static,
-            {'document_root': settings.STATIC_ROOT}),
+            {'document_root': settings.MEDIA_ROOT}),
         path('ui/<path:path>', serve_static,
             {'document_root': settings.BASE_DIR / 'ui' / 'dist'})
 ]

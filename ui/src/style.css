@@ -11,3 +11,12 @@
 .bookshelves__item-active {
   background: green;
 }
+
+.book__title {
+  min-width: 300px;
+  display: inline-block;
+}
+
+.book__button {
+  margin: 5px 10px 5px 10px;
+}

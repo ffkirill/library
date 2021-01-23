@@ -39,7 +39,7 @@ class Book(models.Model):
         max_length=256)
 
     year = models.DateField(verbose_name=_("Year of publication"))
-    isbn = models.PositiveBigIntegerField(verbose_name=_("ISBN"))
+    isbn = models.PositiveIntegerField(verbose_name=_("ISBN"), null=True)
     content = models.FileField(upload_to=settings.UPLOADS_PATH)
     authors = models.ManyToManyField(to=Author, related_name='books')
 
